@@ -1,0 +1,161 @@
+#header {
+    padding: 15px 0;
+    position: relative;
+
+    @media screen and (max-width:$xs) {
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 55px;
+        height: 50px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        transition: all .5s;
+
+        @media screen and (max-width:$sm) {
+            display: none;
+        }
+
+
+        // ul {
+        //     @media screen and (max-width:$sm) {
+        //         column-gap: 20px;
+        //     }
+
+        li {
+
+
+            a {
+                transition: all ease .5s;
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    color: $primary;
+                    background-color: $primary;
+                    width: 0;
+                    height: 3px;
+                    left: 0;
+                    right: 0;
+                    top: 100%;
+                    transition: all ease .5s;
+                }
+
+                &:hover {
+                    color: $primary;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &.active {
+                    color: $primary;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+.toggle {
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    display: none;
+
+    @media screen and (max-width:$sm) {
+        display: block;
+    }
+
+    .line1 {
+        width: 35px;
+        height: 3px;
+        background-color: $primary;
+        transition: all .5s;
+    }
+
+    .line2 {
+        width: 35px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: $primary;
+    }
+
+    .line3 {
+        width: 35px;
+        height: 3px;
+        background-color: $primary;
+        transition: all .5s;
+    }
+}
+
+&.show .nav {
+    display: block;
+
+    ul {
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $white;
+        z-index: 3;
+        width: 100%;
+        border-top: solid 1px $primary;
+        padding: 20px 0;
+
+        li {
+            line-height: $lg-height;
+            padding: 0 15px;
+            &:hover {
+                background-color: $primary;
+               
+            }
+
+            
+
+            &:hover a {
+                color: $white;
+                transition: inherit;
+               
+            }
+
+            a {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+&.show .line2 {
+    display: none;
+}
+
+&.show .line1 {
+    transform: rotate(45deg);
+    position: relative;
+    top: 2px;
+}
+
+&.show .line3 {
+    transform: rotate(-45deg);
+}
+}

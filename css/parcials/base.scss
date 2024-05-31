@@ -1,0 +1,21 @@
+body{
+    padding: $zero-gap;
+    margin: $zero-space;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin:$zero-space;
+    padding: $zero-gap;
+}
+.container{
+    width: 100%;
+    padding: $gutter-padding;
+    max-width: 1170px;
+    margin: $zero-space auto;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

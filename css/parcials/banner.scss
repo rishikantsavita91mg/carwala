@@ -1,0 +1,163 @@
+// #banner, #service, #choose-option {display: none;}
+
+#banner {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 54%;
+    }
+
+    img {
+        width: 100%;
+
+        @media screen and (max-width:$sm) {
+            width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+        }
+
+    }
+
+    .banner-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        z-index: 2;
+       
+        @media screen and (max-width:$sm) {
+            position: relative;          
+            padding: 50px 0;
+            transform: inherit;
+        }
+
+        .banner-content-text {
+
+            width: 100%;
+
+            h4 {
+                color: $white;
+
+                @media screen and (max-width:$sm) {
+                    font-size: $sm-size;
+                    line-height: $sm-height;
+                }
+            }
+
+            h1 {
+                padding: 25px 0 22px 0;
+                max-width: 427px;
+                @media screen and (max-width:$xxl){
+                   padding: 15px 0;
+                }
+                @media screen and (max-width:$xl){
+                  font-size: $lg-size;
+                  max-width: 100%;
+                  padding:8px 0;
+                  line-height: $lg-height;
+                 }
+                 @media screen and (max-width:$lg){
+                    max-width: 427px;
+                   }
+                   @media screen and (max-width:$sm) {
+                    font-size: calc($lg-size - 3px);
+                    line-height: $lg-height;
+                }
+                @media screen and (max-width:$xs) {
+                    font-size:calc($md-size + 4px);
+                    line-height:calc($md-height + 6px);
+                }
+            }
+
+            p {
+                max-width: 485px;
+                color: $white;
+                @media screen and (max-width:$xl){
+                    max-width: 100%;
+                   }
+                   @media screen and (max-width:$lg){
+                    max-width: 485px;
+                   }
+            }
+
+            a.btn {
+                margin-top: 30px;
+                @media screen and (max-width:$xxl){
+                    margin-top: 15px;
+                }
+                @media screen and (max-width:$xl){
+                    margin-top:8px;
+                }
+                @media screen and (max-width:$sm) {
+                    padding: 13px 17px;
+                }
+                @media screen and (max-width:$xs){
+                   padding: 8px 14px;
+                }
+            }
+        }
+
+        .banner-box {
+            width: 100%;
+            display: flex;
+            column-gap: 30px;
+            margin-top: 96px;
+            @media screen and (max-width:$lg){
+               display: none;
+            }
+
+            @media screen and (max-width:$xxl){
+                margin-top: 40px;
+            }
+
+            .box {
+                @extend %box;
+                padding: 13px;
+                transition: all .5s;
+
+                &:hover{
+                    background-color: $primary;
+                   
+                }
+                &:hover img{
+                    filter: brightness(0);
+                }
+                &:hover p{
+                    color: $black;
+                }
+
+
+
+                img {
+                    display: block;
+                    width: 35px;
+                    height: 27px;
+                    transition: all .5s;
+                }
+
+                h3 {
+                    padding: 17px 0 15px 0;
+                }
+
+                p {
+                    color: $secondary;
+                    padding-bottom: 49px;
+                    transition: all .5s;
+                }
+            }
+        }
+
+
+    }
+}

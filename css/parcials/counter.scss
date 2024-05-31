@@ -1,0 +1,99 @@
+#counter {
+    padding: 127px 0 106px 0;
+    background-color: $light-grey;
+
+    @media screen and (max-width:$lg) {
+        padding: 50px 0;
+
+        @media screen and (max-width:$xs) {
+            padding: 40px 0;
+        }
+    }
+   
+
+    .counter-card-main {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width:$md) {
+            width: 50%;
+        }
+
+        @media screen and (max-width:$xs) {
+            width: 100%;
+            border-bottom: solid 1px $primary;
+            padding-bottom: 30px;
+            &:last-child{
+                border-bottom: none;
+                padding: 0;
+            }
+        }
+
+        .counter-card {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            .counter-card-1 {
+
+                h2 {
+                    color: $primary;
+                    font-size: $xxl-size;
+                    line-height: $xxl-height;
+                    font-family: $secondry-font;
+                    @media screen and (max-width:$lg) {
+                        font-size: $xl-size;
+                    line-height: $xl-height;
+                    }
+                    @media screen and (max-width:$md) {
+                        font-size: $lg-size;
+                        line-height: $lg-height;
+                    }
+                    // @media screen and (max-width:$sm) {
+                    //     font-size: $md-size;
+                    //     line-height: $md-height;
+                    // }
+                }
+            }
+
+            .counter-card-2 {
+                align-items: center;
+                display: flex;
+
+                h2 {
+                    font-size: $xxl-size;
+                    color: $primary;
+                    line-height: $xxl-height;
+
+                    @media screen and (max-width:$lg) {
+                        font-size: $xl-size;
+                    line-height: $xl-height;
+                    }
+                    @media screen and (max-width:$md) {
+                        font-size: $lg-size;
+                        line-height: $lg-height;
+                    }
+
+                }
+            }
+
+
+        }
+
+        p {
+            font-size: calc($md-size + 2px);
+            margin-top: 22px;
+            color: $counter-grey-color;
+            @media screen and (max-width:$lg) {
+               margin-top: 18px;
+            }
+            @media screen and (max-width:$md) {
+                margin-top:10px;
+            }
+           
+        }
+
+    }
+}

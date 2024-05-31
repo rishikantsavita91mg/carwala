@@ -1,0 +1,104 @@
+#choose-option {
+    background-color: $light-grey;
+    padding: 90px 0;
+
+    @media screen and (max-width:$lg) {
+        padding: 50px 0;
+    }
+    @media screen and (max-width:$xs) {
+       padding: 40px 0;
+     }
+
+    .choose-option-left {
+        width: calc(49% - 15px);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        @media screen and (max-width:$sm) {
+           width: 100%;
+           align-items: center;
+           text-align: center;
+        }
+        h4{
+            font-weight: normal;
+            @media screen and (max-width:$sm) {
+               font-size: $sm-size;
+               line-height: $sm-height;
+               }
+        }
+       
+        h2 {
+            padding: 20px 0;
+            @media screen and (max-width:$md){
+               font-size:calc($md-size + 7px);
+               line-height:calc($md-height + 6px);
+               padding: 10px 0;
+            }
+            @media screen and (max-width:$xs){
+                font-size:calc($md-size + 3px);
+                line-height:calc($md-height + 1px);
+                padding: 10px 0;
+             }
+        }
+
+        .choose-option-box {
+            display: flex;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            column-gap: 18px;
+            background-color: $white;
+            border-radius: 15px;
+            padding: 26px 40px 28px 15px;
+            box-shadow: 0 4px 4px #999999;
+            @media screen and (max-width:$md){
+                margin-top: 15px;
+                padding-right: 15px;
+            }
+
+
+            .choose-option-box-image {
+                width: auto;
+                @media screen and (max-width:$sm){
+                   width: 100%;
+                }
+            }
+
+            .choose-option-box-text {
+                width: auto;
+                @media screen and (max-width:$sm){
+                    width: 100%;
+                 }
+                 h3{
+                    @media screen and (max-width:$sm){
+                        margin-top: 15px;
+                     }
+                 }
+
+                p {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+    }
+
+    .choose-option-right {
+        width: calc(51% - 15px);
+        @media screen and (max-width:$lg) {
+           display: flex;
+        }
+         @media screen and (max-width:$sm) {
+           width: 100%;
+        }
+      
+
+        img {
+            width: 100%;
+           display: block;
+           @media screen and (max-width:$md){
+           object-fit: contain;
+        }
+        }
+    }
+}

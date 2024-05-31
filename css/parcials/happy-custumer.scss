@@ -1,0 +1,213 @@
+#happy-customer {
+    width: 100%;
+    position: relative;
+    height: 100%;
+
+    &::after {
+        background: $black;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        opacity: 59%;
+        left: 0;
+        position: absolute;
+    }
+
+    img {
+        width: 100%;
+
+        @media screen and (max-width:$md) {
+            position: absolute;
+            object-fit: cover;
+            height: 100%;
+            object-position: center;
+        }
+       
+    }
+
+    .happy-customer-content {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        @media screen and (max-width:$lg) {
+           padding:48px 0;
+        }
+        @media screen and (max-width:$md) {
+           position: relative;
+          
+           transform: inherit;
+        }
+        @media screen and (max-width:$sm) {
+            text-align: center;
+         }
+        @media screen and (max-width:$xs) {
+           padding: 30px 0;
+        }
+
+        .happy-left {
+            width: calc(60% - 15px);
+
+            @media screen and (max-width:$md) {
+                width: 100%;
+            }
+
+            h4 {
+                color: $white;
+                font-weight: normal;
+                @media screen and (max-width:$sm) {
+                    font-size: $sm-size;
+                    line-height: $sm-height;
+                    }
+            }
+
+            h2 {
+                color: $white;
+                max-width: 377px;
+                margin: 30px 0 25px 0;
+
+                @media screen and (max-width:$lg) {
+                    margin: 20px 0;
+                }
+                @media screen and (max-width:$md) {
+                    margin:10px 0;
+                    max-width: 100%;
+                    font-size:calc($md-size + 7px);
+                    line-height:calc($md-height + 6px);
+                }
+                @media screen and (max-width:$xs) {
+                    margin:10px 0;
+                    max-width: 100%;
+                    font-size:calc($md-size + 3px);
+                    line-height:calc($md-height + 1px);
+                }
+                
+            }
+
+            p {
+                color: $white;
+                max-width: 658px;
+                @media screen and (max-width:$xs) {
+                  line-height: calc($md-height - 4px);
+                }
+            }
+
+            a.btn {
+                margin-top: 35px;
+                display: inline-flex;
+                padding: 13px 17px;
+                column-gap: 5px;
+                align-items: center;
+
+                @media screen and (max-width:$lg) {
+                    margin-top: 20px;
+                }
+                @media screen and (max-width:$md) {
+                    margin-top: 10px;
+                }
+                @media screen and (max-width:$xs) {
+                    padding: 8px 13px;
+                }
+
+            }
+        }
+
+        .happy-right {
+            width: calc(40% - 15px);
+
+            @media screen and (max-width:$md) {
+                width: 100%;
+            }
+            @media screen and (max-width:$sm) {
+             display: none;
+            }
+
+            .happy-right-box-main {
+                background-color: $white;
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+                padding: 35px 35px 40px 35px;
+
+                @media screen and (max-width:$lg) {
+                    padding: 20px 15px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .happy-right-box {
+                    border-bottom: solid 1px $black;
+
+
+                    h5 {
+                        font-size: $sm-size;
+                        line-height: $sm-height;
+                        font-family: $secondry-font;
+                        font-weight: $md-weight;
+                        color: $black;
+                        margin: 0;
+                        padding-bottom: 9px;
+
+                    }
+                }
+
+                .happy-right-box-bottom {
+                    ul {
+                        flex: inherit;
+                        flex-wrap: wrap;
+                        padding: $zero-gap;
+                        row-gap: 8px;
+                        margin-top: 25px;
+
+                        @media screen and (max-width:$md) {
+                            display: flex;
+                        }
+
+                        li {
+                            width: 100%;
+                            justify-content: space-between;
+                            display: flex;
+                            font-size: calc($md-size - 1px);
+                            line-height: calc($lg-height - 5px);
+                            font-weight: $md-weight;
+                            font-family: $secondry-font;
+                            align-items: center;
+
+                            @media screen and (max-width:$md) {
+                                width: calc(48% - 10px);
+                            }
+
+                            @media screen and (max-width:$lg) {
+                                line-height: $md-height;
+                                font-size: calc($sm-size + 2px);
+                            }
+
+                            h5 {
+                                color: $black;
+                                width: 50%;
+                                margin: $zero-space;
+                            }
+
+                            span {
+                                display: block;
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 5px;
+
+                                img {
+                                    object-fit: inherit;
+                                    height:20px;
+                                    width: auto;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
